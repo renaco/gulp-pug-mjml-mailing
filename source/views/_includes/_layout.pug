@@ -1,0 +1,32 @@
+mjml
+  mj-head
+    mj-attributes
+      mj-text(padding='0')
+      mj-class(name='blue', color='black')
+      mj-class(name='big', font-size='18px', font-weight='bold')
+      mj-class(name='valigntop', padding-right='25px', line-height='120px')
+      mj-class(name='normal', font-size='15px')
+      mj-class(name='medium', font-size='14px')
+      mj-class(name='center', align='center')
+      mj-class(name='right', align='right')
+      mj-class(name='left', align='left')
+      mj-class(name='white', color='#ffffff')
+      mj-class(name='small', color='#1f1f1f' font-size='11px', line-height='14px')
+      mj-class(name='button', background-color='#343434', font-size='16px', font-weight='bold', padding='10px 30px')
+      mj-all(font-family='Arial')
+      mj-styles.
+        .table {
+          max-width: 600px;
+        }
+
+  mj-body
+    mj-container
+      mj-section(padding='0', border-top='1px solid #f0c83f', border-right='1px solid #f0c83f', border-left='1px solid #f0c83f')
+        mj-column
+          block header
+            include ./header.pug
+
+          block content
+      
+      block footer
+        include ./footer.pug
