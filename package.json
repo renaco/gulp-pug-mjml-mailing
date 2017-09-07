@@ -1,18 +1,18 @@
 {
   "name": "pagoefectivo-microservices-mail",
   "version": "0.0.0",
-  "description": "Workflow for creation of mailing from MJML to html passed from pug",
+  "description": "Workflow for mailing creation from MJML to html passed from pug",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/orbisunt/pagoefectivo-frontend-microservices-mail.git"
+    "url": "git+ssh://git@ithub.com:renaco/gulp-pug-mjml-mailing.git"
   },
   "author": "renaco",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/orbisunt/pagoefectivo-frontend-microservices-mail#readme",
+  "homepage": "https://github.com/renaco/gulp-pug-mjml-mailing",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
