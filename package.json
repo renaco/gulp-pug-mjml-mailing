@@ -14,14 +14,14 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/orbisunt/pagoefectivo-frontend-microservices-mail#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.7",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-inline-source": "^3.0.0",
-    "gulp-mjml": "^2.0.0",
-    "gulp-pug": "^3.2.0",
+    "gulp-inline-source": "^3.1.0",
+    "gulp-mjml": "^2.2.0",
+    "gulp-pug": "^3.3.0",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.8",
-    "mjml": "^3.2.2"
+    "mjml": "^3.3.3"
   }
 }
