@@ -6,7 +6,7 @@ Easy workflow to made modern responsive email with [Gulp](https://github.com/gul
 
 ### Install dependencies
 ```bash
-$ npm install
+$ npm i -E
 ```
 
 ### Change directory
@@ -30,17 +30,18 @@ Launch http://localhost:3000
 Source Pug files into:
 source/views/
 
-HTML build templates
-build/
-
 ### Available tasks:
 
 #### Compile email
 ```bash
-$ gulp email
+$ gulp build
 ````
 
+HTML build templates
+build/
+
 #### Watch 
+
 ```bash
 $ gulp watch
 ````

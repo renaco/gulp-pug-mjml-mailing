@@ -1,11 +1,12 @@
 {
   "name": "gulp-pug-mjml-mailing",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Workflow for mailing creation from MJML to HTML from pug",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "build": "build"
   },
   "repository": {
     "type": "git",
@@ -14,14 +15,13 @@
   "author": "renaco",
   "homepage": "https://github.com/renaco/gulp-pug-mjml-mailing",
   "devDependencies": {
-    "browser-sync": "^2.26.0",
-    "gulp": "^3.9.1",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-inline-source": "^3.1.0",
-    "gulp-mjml": "^3.0.0",
-    "gulp-pug": "^4.0.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-util": "^3.0.8",
-    "mjml": "^4.2.0-beta.3"
+    "browser-sync": "2.26.3",
+    "gulp": "4.0.0",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-mjml": "3.0.0",
+    "gulp-pug": "4.0.1",
+    "gulp-rename": "1.4.0",
+    "gulp-util": "3.0.8",
+    "mjml": "4.4.0-beta.1"
   }
 }

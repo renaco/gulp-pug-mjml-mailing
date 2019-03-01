@@ -1,37 +1,34 @@
-var gulp = require('gulp');
+let gulp = require('gulp');
+let browserSync = require('browser-sync');
+let htmlmin = require('gulp-htmlmin');
+let mjml = require('gulp-mjml');
+let pug = require('gulp-pug');
+let rename = require('gulp-rename');
 
-var browserSync = require('browser-sync');
-var inlinesource = require('gulp-inline-source')
-var htmlmin = require('gulp-htmlmin');
-var mjml = require('gulp-mjml');
-var pug = require('gulp-pug');
-var rename = require('gulp-rename');
-var util = require('gulp-util');
-
-gulp.task('email', function() {
-    gulp.src('./source/views/templates/**/*.pug')
-        .pipe(pug({
-            pretty:true
-        }))
-        .pipe(rename({
-            extname: '.mjml'
-        }))
-        .pipe(mjml())
-        .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('./build'));
+gulp.task('build', function () {
+  gulp.src('./source/views/templates/**/*.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(rename({
+      extname: '.mjml'
+    }))
+    .pipe(mjml())
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('./build'));
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
       baseDir: "./build"
     },
-		startPath: ''
+    startPath: ''
   });
 });
 
-gulp.task('watch', function(){
-    gulp.watch('./source/views/templates/**/*.pug', ['email']).on('change', browserSync.reload);
+gulp.task('watch', function () {
+  gulp.watch('./source/views/templates/**/*.pug', ['build']).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['email', 'watch', 'browser-sync']);
+gulp.task('default', ['build', 'watch', 'browser-sync']);
