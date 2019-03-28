@@ -1,3 +1,5 @@
+'use strict';
+
 let gulp = require('gulp');
 let browserSync = require('browser-sync');
 let htmlmin = require('gulp-htmlmin');
@@ -5,8 +7,12 @@ let mjml = require('gulp-mjml');
 let pug = require('gulp-pug');
 let rename = require('gulp-rename');
 
-gulp.task('build', function () {
-  gulp.src('./source/views/templates/**/*.pug')
+// configs
+let inputPath = './source/views/**/*.pug';
+let outputPath = './build';
+
+gulp.task('build', () => {
+  return gulp.src(inputPath)
     .pipe(pug({
       pretty: true
     }))
@@ -15,20 +21,22 @@ gulp.task('build', function () {
     }))
     .pipe(mjml())
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest(outputPath));
 });
 
-gulp.task('browser-sync', function () {
-  browserSync.init({
+gulp.task('browser-sync', (cb) => {
+  browserSync({
     server: {
-      baseDir: "./build"
+      baseDir: outputPath
     },
-    startPath: ''
-  });
+    port: 4000
+  }, cb);
 });
 
-gulp.task('watch', function () {
-  gulp.watch('./source/views/templates/**/*.pug', ['build']).on('change', browserSync.reload);
+gulp.task('watch', () => {
+  return gulp.watch(inputPath, gulp.series(
+    'build'
+  ));
 });
 
-gulp.task('default', ['build', 'watch', 'browser-sync']);
+gulp.task('default', gulp.series('build', 'browser-sync', 'watch'));

@@ -3,11 +3,6 @@
   "version": "0.2.0",
   "description": "Workflow for mailing creation from MJML to HTML from pug",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
-    "build": "build"
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@ithub.com:renaco/gulp-pug-mjml-mailing.git"
@@ -23,5 +18,11 @@
     "gulp-rename": "1.4.0",
     "gulp-util": "3.0.8",
     "mjml": "4.4.0-beta.1"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp watch"
   }
 }

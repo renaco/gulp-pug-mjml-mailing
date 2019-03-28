@@ -1,0 +1,21 @@
+extends  ./_includes/_layout.pug
+
+block header
+
+block content
+  mj-section(padding='20px 15px')
+    mj-column
+      mj-text(mj-class='blue medium center')
+        h1(style='text-transform:uppercase')
+          | My awesome home
+        p(style='text-align:left')
+          | Can you browse between templates:
+        ul(style='text-align:left')
+          li
+            a(href='./templates/index.html')
+              | Normal template
+          li
+            a(href='./templates/contact.html')
+              | Contact template
+
+block footer
