@@ -1,2 +1,4 @@
 node_modules/
-build/_includes/
+_includes/
+build/
+temp/
