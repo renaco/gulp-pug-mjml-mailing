@@ -17,17 +17,18 @@ $ npm run start
 
 ### Available tasks:
 
+#### Watch
+
+```bash
+$ npm run watch
+```
+
 #### Compile email
 
 ```bash
 $ npm run build
 ```
 
-#### Watch
-
-```bash
-$ npm run watch
-```
 
 Launch http://localhost:4000
 
